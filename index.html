@@ -11,7 +11,31 @@
 </head>
 <body>
 
+    <div class="container">
+        <h1>Comments</h1>
+        <hr>
+        <div class="form-todo form-group">
+            <p>
+                <input placeholder="Your name" type="text" name="author"
+                class="form-control" />
+            </p>
+            <p>
+                <textarea placeholder="Your comment" name="message"
+                class="form-control"></textarea>
+            </p>
+            <button type="submit" class="btn btn-primary">Comment</button>
+        </div>
 
+        <div class="list-group-item">
+            <span class="comment__author">
+                Author: <strong>Gabriel</strong>
+            </span>
+            <p>Hello, World!</p>
+            <div>
+                <a href="#" title="Delete">Delete</a>
+            </div>
+        </div>
+    </div>
     
     <!-- Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
