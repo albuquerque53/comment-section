@@ -1,3 +1,3 @@
-# Simple Comment System
+# Comment Section
 
-This is a simple project where I'm learning to use VueJS
+:warning: **This is a study project (for academic purposes)** :warning:
