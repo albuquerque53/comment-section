@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -8,38 +8,50 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"> 
-</head>
-<body>
+  </head>
+  <body>
 
-    <div class="container">
-        <h1>Comments</h1>
-        <hr>
-        <div class="form-todo form-group">
-            <p>
-                <input placeholder="Your name" type="text" name="author"
-                class="form-control" />
-            </p>
-            <p>
-                <textarea placeholder="Your comment" name="message"
-                class="form-control"></textarea>
-            </p>
-            <button type="submit" class="btn btn-primary">Comment</button>
-        </div>
+    <div id="app"></div>
 
-        <div class="list-group-item">
-            <span class="comment__author">
-                Author: <strong>Gabriel</strong>
-            </span>
-            <p>Hello, World!</p>
-            <div>
-                <a href="#" title="Delete">Delete</a>
-            </div>
-        </div>
-    </div>
-    
     <!-- Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-</body>
+
+    <!-- VueJS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script>
+      new Vue({
+        el: '#app',
+        template: `
+          <div class="container">
+            <h1>Comments</h1>
+            <hr>
+            <div class="form-todo form-group">
+              <p>
+                <input placeholder="Your name" type="text" name="author"
+                class="form-control" />
+              </p>
+              <p>
+                <textarea placeholder="Your comment" name="message"
+                class="form-control"></textarea>
+              </p>
+              <button type="submit" class="btn btn-primary">Comment</button>
+            </div>
+
+            <div class="list-group-item">
+              <span class="comment__author">
+                Author: <strong>Gabriel</strong>
+              </span>
+              <p>Hello, World!</p>
+              <div>
+                <a href="#" title="Delete">Delete</a>
+              </div>
+            </div>
+          </div>
+            `
+      })
+    </script>
+  </body>
 </html>
