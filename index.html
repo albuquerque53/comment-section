@@ -40,17 +40,31 @@
               <button type="submit" class="btn btn-primary">Comment</button>
             </div>
 
-            <div class="list-group-item">
+            <div class="list-group-item" v-for="comment in comments">
               <span class="comment__author">
-                Author: <strong>Gabriel</strong>
+                Author: <strong>{{ comment.name }}</strong>
               </span>
-              <p>Hello, World!</p>
+              <p>{{ comment.message }}</p>
               <div>
                 <a href="#" title="Delete">Delete</a>
               </div>
             </div>
           </div>
-            `
+            `,
+          data() {
+            return {
+                comments: [
+                  {
+                    name: 'Gabriel',
+                    message: 'Hello, World'  
+                  },
+                  {
+                    name: 'Bruce Wayne',
+                    message: "I'm not Batman'"
+                  },
+                ]
+            }
+          }
       })
     </script>
   </body>
