@@ -13,3 +13,6 @@
 - [X] Basic Usage
 - [X] Interpolations
 - [X] Directives
+- [X] Event Modifiers
+- [X] VueJS CLI
+- [X] Single File Components
