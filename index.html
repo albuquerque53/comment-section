@@ -85,6 +85,11 @@
               name: comment.name.trim() === '' ? 'Anonymous' : comment.name
             }))
           }
+        },
+        watch: {
+          comments(val) {
+            console.log('Changed/Created a Comment', val)
+          }
         }
       })
     </script>
