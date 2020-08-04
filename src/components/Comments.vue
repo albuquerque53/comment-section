@@ -3,6 +3,7 @@
     <h1>Comments</h1>
     <hr>
     <FormTodo v-on:add-todo="addComment"></FormTodo>
+    <p v-if="!comments[0]" class="text-muted">Be the first to comment :)</p>
     <div class="list-group-item" v-for="comment in allComments" v-bind:key="comment.id">
       <span class="comment__author">
         Author: <strong>{{ comment.name }}</strong>
