@@ -2,18 +2,7 @@
   <div class="container">
     <h1>Comments</h1>
     <hr>
-    <div class="form-todo form-group">
-      <p>
-        <input placeholder="Your name" type="text" name="author"
-        class="form-control" v-model="name"/>
-      </p>
-      <p>
-        <textarea placeholder="Your comment" name="message"
-        class="form-control" v-model="message"></textarea>
-      </p>
-      <button type="submit" class="btn btn-primary" v-on:click="addComment">Comment</button>
-    </div>
-
+    <FormTodo v-on:add-todo="addComment"></FormTodo>
     <div class="list-group-item" v-for="comment in allComments" v-bind:key="comment.id">
       <span class="comment__author">
         Author: <strong>{{ comment.name }}</strong>
@@ -29,27 +18,20 @@
 </template>
 
 <script>
+import FormTodo from './FormTodo'
+
 export default {
+  components: {
+    FormTodo
+  },
   data() {
     return {
       comments: [],
-      name: '',
-      message: ''
     }
   },
   methods: {
-    addComment() {
-      if(this.message.trim() === '') {
-        return;
-      }
-            
-      this.comments.push({
-        name: this.name,
-        message: this.message
-      })
-
-      this.name = ''
-      this.message = ''
+    addComment(comment) {
+      this.comments.push(comment)
     },
     removeComment(index) {
       this.comments.splice(index, 1);
